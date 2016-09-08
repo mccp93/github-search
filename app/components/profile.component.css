@@ -1,0 +1,96 @@
+.profile {
+    text-align: center;
+    background-color: ghostwhite;
+}
+
+.profile > .profilehead {
+    background-color: papayawhip; 
+    height: 135px;
+}
+
+.profile > .avatar {
+    position: relative;
+    border-radius: 25px;
+    margin-bottom: -100px;
+    height: 150px;
+    width: 150px;
+    top: -100px;
+}
+
+.profile > .info > .title{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.profile > .info > .bio{
+    margin: 0 auto;
+    width: 60%;
+    font-style: italic;
+    padding-bottom: 17px;
+}
+
+.profile .stats{
+    height: 20px;
+    width: 25%;
+    float: right;
+    display: table;
+}
+
+.profile > .panel{
+    width: 85%;
+    display: inline-block;
+    text-align: left;
+}
+
+.otherstats{
+    display: inline-block;
+}
+
+.profile > .panel > .panel-heading{
+    background-color: orange;
+    color: white;
+}
+
+.profile .label.label-primary{
+    background-color:orange;
+    color: black;
+}
+
+.update-nag{
+  font-size: 14px;
+  text-align: left;
+  background-color: white;
+  height: 40px;
+  width: 85%;
+  -webkit-box-shadow: 0 1px 1px 0 lightgrey;
+  box-shadow: 0 1px 1px 0 lightgrey;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.update-nag .update-split{
+    background: orange;
+    width: 100px;
+    float: left;
+    color: white;
+    text-align: center;
+    box-shadow: 0 2px 2px 0 lightgrey;
+}
+
+.update-nag .update-split .glyphicon{
+    position:relative;
+    height: 40px;
+    line-height: 40px;
+    padding-right: 10px
+}
+
+.update-nag .update-text{
+  padding-top: 11px;
+  padding-right: 20px;
+  line-height: 23px;
+  padding-left: 20px;
+  display: inline-block;
+}
+
+
+

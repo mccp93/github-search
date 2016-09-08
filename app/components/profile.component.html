@@ -1,0 +1,83 @@
+
+<div class="row">
+    <div class="col-md-12">
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Github Username" name="username" [(ngModel)]="username" (keyup)="searchUser()">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div *ngIf="user">
+    <div class="profile">
+        <div class="profilehead">
+
+        </div>
+        <img alt="{{user.html_url}}" class="avatar" src="{{user.avatar_url}}" style="border: 1px black solid">
+        <div class="info">
+            <div class="title">
+                <a href="{{user.html_url}}">{{user.name}}</a>
+            </div>
+            <div class="bio">{{user.bio}}</div>
+
+            <div class="stats">
+                <span class="label label-primary"> {{user.public_repos}} Public Repos </span>
+            </div>
+            <div class="stats">
+                <span class="label label-primary"> {{user.public_gists}} Public Gists </span>
+            </div>
+            <div class="stats">
+                <span class="label label-primary"> {{user.followers}} Followers </span>
+            </div>
+            <div class="stats">
+                <span class="label label-primary"> {{user.following}} Following </span>
+            </div>
+            <hr>
+        </div>
+
+        <div class="update-nag">
+            <div class="update-split update-info"><i class="glyphicon glyphicon-user"></i>Username</div>
+            <div class="update-text"> {{ user.login }}</div>
+        </div>
+
+        <div class="update-nag">
+            <div class="update-split update-info"><i class="glyphicon glyphicon-home"></i>Location</div>
+            <div class="update-text"> {{ user.location }}</div>
+        </div>
+        <div class="update-nag">
+            <div class="update-split update-info"><i class="glyphicon glyphicon-envelope"></i>Email</div>
+            <div class="update-text"> {{ user.email }}</div>
+        </div>
+        <div class="update-nag">
+            <div class="update-split update-info"><i class="glyphicon glyphicon-pencil"></i>Blog</div>
+            <div class="update-text"> {{ user.blog }}</div>
+        </div>
+        <div class="update-nag">
+            <div class="update-split update-info"><i class="glyphicon glyphicon-hand-right"></i>Since</div>
+            <div class="update-text"> {{ user.created_at }}</div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"> Repos </h3>
+            </div>
+            <div class="panel-body">
+                <div *ngFor="let repo of repos">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4> <a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a> </h4>
+                            <p> {{ repo.description }} </p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <span class="label label-primary otherstats"> {{repo.watchers}} Watchers </span>
+                            <span class="label label-primary otherstats"> {{repo.forks}} Forks </span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
